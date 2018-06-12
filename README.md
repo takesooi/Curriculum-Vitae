@@ -16,10 +16,14 @@
 - Hangfire
   - バッチサーバーで使用
 - Entity Framework Core、Dapper
-- StackExchange、Booksleeve、ServiceStack
+- REDIS：StackExchange、Booksleeve、ServiceStack
 - IIS、SelfHost、Nancy
 - Lz4、MessagePack、ZeroFormatter、Jil
 - TopSelf
+- AWS：AutoScaling、Instance調整、Build、Deploy周り、Lambda
+- Unity：NW、Script、UniWebview
+- BigQuery(ETW) ログ蓄積
+- MYSQL、SQLSERVER
 
 ### CI
 - Jenkins、AppVeyor
@@ -27,9 +31,13 @@
 ### 強み
 - サーバーサイド以外にもインフラ、クライアントの知識があり、またそこの知識を勉強しています。
 - 新規コンテンツのチーフを任されることが多かったため、新しいことや問題解決能力に優れている。
-     
+- トラブルシューティングでは以下を使用して解析していました。
+  - debug diagnostic tool、WinDbgを使用したメモリ解析
+  - perfviewを使用したスレッド解析
+  - PerformanceCounterの使用
+
 ### 興味があるもの
-- GCP、AWS、Unity周りをどんどん触っていきたい。
+- GCP、AWS、Unity周りをどんどん触っていきたい。フルスタックなエンジニアに興味あり
 
 ## 職務経歴
 
@@ -69,7 +77,7 @@
 - テスト
   - MSTest
   - 負荷テスト
-    - locust、jmeterを試したが状態維持が困難なため、独自で実装した。
+    - locust、jmeterを試したが負荷ツール側に状態を保持する必要があり、また大量のオブジェクト作成が必要なため、共通ライブラリ(クライアント-サーバー間インターフェイス)を使用した独自負荷ツールを作成した。結果は短期間でのツール作成と、容易なシナリオ作成を可能とした、ツールのパフォーマンスに問題なし。
     - 機能テスト、シナリオテストを実行でき、ViewにてTPSなど確認可能
 
 - コード自動化
